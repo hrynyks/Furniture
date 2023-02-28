@@ -1,0 +1,205 @@
+.header {
+    padding: 15px 0;
+    background-color: $light-color;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 15px 15px;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &__items {
+            display: flex;
+            gap: 15px;
+            text-transform: uppercase;
+
+            @include a (mobile) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &__item-link {
+            font-weight: 700;
+            color: $dark-color;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+
+            &:hover {
+                border-bottom: 3px solid $main-color;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include a (tablet) {
+            justify-content: space-between;
+        }
+
+
+
+        &-wrap {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            
+        }
+
+
+        &-span {
+            font-weight: 700;
+            color: $dark-color;
+            display: inline-block;
+            margin-right: 13px;
+        }
+
+        &-link {
+            margin-right: 30px;
+
+            &:nth-child(4) {
+                margin-right: 55px;
+            }
+        }
+
+        &-phone {
+            font-weight: 700;
+            color: $dark-color;
+            padding-left: 34px;
+            padding-right: 24px;
+            white-space: nowrap;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../images/phone-icon.svg);
+                width: 24px;
+                height: 24px;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../images/arrow-icon.svg);
+                width: 14px;
+                height: 8px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include a (tablet) {
+                    display: none;
+                }
+            }
+
+            @include a (tablet) {
+                width: 56%;
+            }
+        }
+    }
+
+    &__line {
+        height: 1px;
+        background-color: #1E2E36;
+        max-width: 100%;
+    }
+
+    &-bot {
+        padding: 15px 15px 0;
+        background-color: $light-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &__items {
+            display: flex;
+            gap: 20px;
+            text-transform: uppercase;
+            flex-wrap: wrap;
+
+            @include a (mobile) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &__item {
+            padding-right: 21px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../images/arrow-icon.svg);
+                width: 14px;
+                height: 8px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &-link {
+                font-weight: 700;
+                color: $dark-color;
+            }
+        }
+    }
+
+    &__logo {
+        @include a (laptop) {
+            order: -1;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        &-link {
+            font-weight: 700;
+            color: $dark-color;
+            padding-left: 35px;
+            text-transform: uppercase;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                // background: url(/src/assets/images/cart-icon.svg);
+                width: 30px;
+                height: 30px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__btn {
+        padding: 14px 46px;
+        border-radius: 3px;
+        color: $light-color;
+        background-color: $main-color;
+    }
+}

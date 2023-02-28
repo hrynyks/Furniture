@@ -1,0 +1,41 @@
+.about {
+    padding-top: 100px;
+
+    &-wrap {
+        background: url(../images/about.jpg) no-repeat right bottom/ 1407px 675px;
+        padding: 100px 0;
+
+        @include a (tablet-xl) {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    &__content {
+        max-width: 791px;
+        background-color: $light-color;
+        padding: 50px;
+        border-right: 15px solid $main-color;
+
+        @include a (tablet-xl) {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &__descr {
+        line-height: 125%;
+        color: $dark-color;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-span {
+            line-height: 125%;
+            font-weight: 700;
+            color: $main-color;
+            text-transform: uppercase;
+        }
+    }
+}

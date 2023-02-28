@@ -1,0 +1,150 @@
+.categories {
+    padding-top: 100px;
+    background-color: $light-color;
+
+    &-container {
+        padding: 0 15px;
+
+        @include a (laptop) {
+            padding: 0;
+        }
+    }
+
+    &-top__items {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        place-items: center;
+        align-items: baseline;
+        gap: 30px;
+        margin-bottom: 87px;
+
+        @include a (tablet-xl) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &-top__item {
+        &:hover .categories-top__img {
+            fill: $main-color;
+        }
+
+        &:hover .categories__title {
+            border-bottom: 3px solid $main-color;
+        }
+    }
+
+    &__title {
+        font-size: toRem(24);
+        color: $dark-color;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+    }
+
+    &-bot__items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(320px, 586px));
+        column-gap: 30px;
+        row-gap: 50px;
+        margin-bottom: 50px;
+
+        @include a (laptop) {
+            grid-template-columns: repeat(2, minmax(320px, 586px));
+        }
+
+        @include a (tablet) {
+            grid-template-columns: minmax(320px, 586px);
+            justify-content: center;
+        }
+    }
+
+    &-bot__item {
+        max-width: 586px;
+        width: 100%;
+        text-transform: uppercase;
+        color: $dark-color;
+
+        &:hover .categories__descr {
+            background-color: $main-color;
+            color: $light-color;
+        }
+
+        &:hover .categories__price {
+            color: $light-color;
+        }
+
+        &:hover {
+            transform: translateY(-25px);
+        }
+
+        &-image {
+            position: relative;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        font-weight: 700;
+        padding: 5px 15px;
+        color: $light-color;
+        background-color: $dark-color;
+        left: 0;
+        top: 10px;
+    }
+
+    &__action {
+        position: absolute;
+        font-weight: 700;
+        padding: 5px 15px;
+        color: $light-color;
+        background-color: #FF1B1B;
+        left: 0;
+        top: 48px;
+    }
+
+    &__descr {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        padding: 15px;
+        margin-top: -5px;
+        white-space: nowrap;
+    }
+
+    &__name {
+        font-size: toRem(24);
+    }
+
+    &__price {
+        font-size: toRem(24);
+        &-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-new {
+            color: #FF1B1B;
+        }
+
+        &-last {
+            font-size: toRem(18);
+            text-decoration: line-through;
+            color: #BCBDBB;
+        }
+    }
+
+    &__btn {
+        padding: 14px 46px;
+        color: $light-color;
+        background-color: $main-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto;
+    }
+}

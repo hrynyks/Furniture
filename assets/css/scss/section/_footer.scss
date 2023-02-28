@@ -1,0 +1,204 @@
+.footer {
+    position: relative;
+    &-container {
+        display: flex;
+    }
+
+    &__content {
+        background-color: $dark-color;
+        padding: 50px 56px 15px 50px;
+        max-width: 831px;
+
+        @include a (tablet-xl) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        position: absolute;
+        left: 36px;
+        top: -20px;
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 117px;
+        margin-bottom: 100px;
+
+        @include a (tablet-xl) {
+            justify-content: center;
+        }
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__links {
+            display: flex;
+            gap: 57px;
+        }
+
+        &__bot {
+            display: flex;
+            justify-content: space-between;
+
+            @include a (mobile) {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__item {
+        padding-left: 18px;
+        position: relative;
+
+        &-link {
+            color: $light-color;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 3px;
+            background-color: $main-color;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__map {
+        font-weight: 400;
+        color: $light-color;
+        display: block;
+        margin-bottom: 16px;
+        padding-left: 26px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../images/footer-map-icon.svg);
+            width: 19px;
+            height: 23px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__day {
+        font-weight: 400;
+        color: $light-color;
+        display: block;
+        margin-bottom: 16px;
+        padding-left: 26px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../images/footer-day-icon.svg);
+            width: 22px;
+            height: 24px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__phone {
+        font-weight: 700;
+        position: relative;
+        color: $main-color;
+        padding-left: 26px;
+        display: block;
+        &-1 {
+            margin-bottom: 5px;
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(../images/footer-phone-icon.svg);
+                width: 24px;
+                height: 24px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-2{
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        color: $light-color;
+        display: block;
+        margin-bottom: 15px;
+        white-space: nowrap;
+    }
+
+    &__social {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__copyright {
+        font-size: toRem(14);
+        font-weight: 400;
+        color: $light-color;
+    }
+
+    &__bot-link {
+        font-size: toRem(14);
+        font-weight: 400;
+        color: $light-color;
+        padding-left: 23px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../images/footer-clyanec-icon.svg);
+            width: 20px;
+            height: 21px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__image {
+        overflow: hidden;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 1089px;
+        max-width: none;
+    }
+}
